@@ -1,3 +1,10 @@
+# Example of blinking the built-in LED for Desert Media Art
+# Sri Pranav Srivatsavai
+# 2022-09-07
+
+# Uses code from Adafruit
+# https://learn.adafruit.com/adafruit-feather-m4-express-atsamd51/creating-and-editing-code
+
 print("Hello Desert Media Art!")
 print("Let's Blink")
 
@@ -15,7 +22,10 @@ led = digitalio.DigitalInOut(board.LED) # the way we access the pin
 # set the pin as the output so that we can turn it on/off
 led.direction = digitalio.Direction.OUTPUT 
 
+# Record the start time
 startTime = time.monotonic()
+
+# How long to blink for
 secondsToBlink = 5
 
 print("Starting to Blink")
@@ -25,9 +35,7 @@ while (time.monotonic() - startTime) < secondsToBlink:
     time.sleep(0.5/2) # delay
     led.value = False # OFF the LED
     time.sleep(0.5/2) # delay
-    
-    # sepcial notation of python to say take this and fill in what is inside the bracket
-    print("  time - %.2f" % time.monotonic()) # space to debug easily
+    print("  time - %.2f" % time.monotonic()) # sepcial notation of python to say take this and fill in what is inside the bracket
     
     if led.value == True:
         print("   1")
