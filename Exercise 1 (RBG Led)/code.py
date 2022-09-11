@@ -2,11 +2,11 @@
 # Sri Pranav Srivatsavai
 # Desert Media Art
 # 2022-09-11
-# Description: This code is an attempt at setting the mood using lighting for a short scene from Mr. Bean's movie.
+# Description: This code is an attempt at setting the mood using lighting for a short scene from Mr. Bean's movie. 
 # The light is set for 0:00 - 1:48 mins of the video
 # Link to the video: https://www.youtube.com/watch?v=a-VLZ0T8WMo
 
-# Uses code from Adafruit:
+# Uses code from Adafruit: 
 # https://learn.adafruit.com/adafruit-feather-m4-express-atsamd51/circuitpython-internal-rgb-led
 
     # SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
@@ -36,17 +36,17 @@ else:
     led = neopixel.NeoPixel(board.NEOPIXEL, 10)
 
 #set the brightness of the bulb to 0 initially
-brightness = 0
+brightness = 0 
 
 # scene - inital: Bean opens his eyes
 # NOTE: the numbers for the while loop are chosen after testing with the time of each scene in the video
 # increase brightness gradually and proceed to next scene once the time for that scene is over
-while brightness <= 0.35:
+while brightness <= 0.35: 
     led.brightness = brightness
     brightness = (brightness+0.0001) # increment brightness
-    led[0] = (255,255,255) # (r,g,b) format
+    led[0] = (255,255,255) # (r,g,b) format – white color
 
-# scene - pleasant: Bean looks around
+# scene - pleasant: Bean looks around 
 i = 0
 # yellow light turns on and gradually goes off repeatedly
 while i < 8000:
@@ -69,8 +69,8 @@ while j < 0.25:
     j+=0.1 # increment j by 0.1
 
 # scene - chaos: shooting begins
-k = 0; # used in the while loop to end the loop after a specific point
-while k < 1.3:
+k = 0; # used in the while loop to end the loop after a specific point  
+while k < 1.3: 
     led.brightness = 0.5 # 50% brightness
     led[0] = (255,0,0) # red light
     time.sleep(0.25)
@@ -78,15 +78,15 @@ while k < 1.3:
     time.sleep(0.25)
     
     led.brightness = 1 # 100% brightness
-    led[0] = (255,0,0 # red light
-    time.sleep(0.25)
+    led[0] = (255,0,0) # red light
+    time.sleep(0.25) 
     led[0] = (0,0,255) # blue light
     time.sleep(0.25)
     
     k+=0.1 # increment k by 0.1
 
-# Inspiration: Adafruit code
 # scene - confusion: shooting stops
+# Inspiration: Adafruit code
 i = 0 # for controlling brightness in the loop
 a = 0 # to end the loop at a specific point
 while a<1000:
@@ -106,8 +106,20 @@ while w < 3750:
 # scene - focus: focus on yoghurt
 i = 0 # controlling the brightness in the loop
 a = 0 # to end the loop later at a specific point
-while a<500:
+while a<500: 
     i = (i + 1) % 256  # run from 0 to 255 and again
     led.fill(colorwheel(i)) # rainbow pattern
     time.sleep(0.01)
     a+=1 # increment a by 1
+
+    
+# END: quick throw of light to show the end of scene
+led.brightness = 0.5
+led[0] = (255,255,255)
+time.sleep(0.25)
+led[0] - (0,0,0)
+time.sleep(0.25)
+led[0] = (255,255,255)
+time.sleep(0.25)
+
+# ----- THE END ------
