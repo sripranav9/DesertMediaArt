@@ -6,7 +6,7 @@ Create a mood using the LED RGB light for the scene in this URL (2 minutes)
 
 ### Video
 
-[Bean's War Movie?! | Mr Bean's Holiday | Mr Bean Official](https://www.youtube.com/watch?v=a-VLZ0T8WMo)
+[YouTube: Bean's War Movie?! | Mr Bean's Holiday | Mr Bean Official](https://www.youtube.com/watch?v=a-VLZ0T8WMo)
 
 ### Idea
 
