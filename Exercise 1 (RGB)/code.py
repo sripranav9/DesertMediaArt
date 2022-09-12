@@ -21,7 +21,6 @@
     #
     # SPDX-License-Identifier: MIT
 
-"""CircuitPython Essentials Internal RGB LED rainbow example"""
 import time
 import board
 from rainbowio import colorwheel
