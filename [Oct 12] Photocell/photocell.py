@@ -19,7 +19,7 @@ brightThreshold = 45000
 
 while True:
 
-    brightness = photoCell∂.value
+    brightness = photoCell.value
     print((brightness,))      # Display value
     
     if (brightness > brightThreshold):
